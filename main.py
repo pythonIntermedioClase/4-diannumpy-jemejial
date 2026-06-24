@@ -208,6 +208,31 @@ def menu_np_where():
     print("\n  (función pendiente de implementar)")
 
 
+def sum_acumulator():
+    """Dada una lista con 5 elementos de tipo entero, 
+    haciendo uso de la repetición for. muestra en pantalla 
+    la suma de esos 5 elementos, par ello vamos a usar 2 
+    formas de suma. Una con variables (de tipo acumulador). 
+    Y la segunda forma es usando la instrucción sum."""
+    numeros = [10, 20, 30, 40, 50]
+    suma = 0
+
+    for numero in numeros:
+        suma = suma + numero 
+    print("La suma de los elementos", numeros, " por ciclos es:", suma)
+
+    for numero in range(len(numeros)):
+        suma = suma + numero 
+    print("La suma de los elementos", numeros, " por ciclos es:", suma)
+
+
+def sum_funcion(): 
+    numeros = [10, 20, 30, 40, 50]
+
+    suma = sum(numeros)
+
+    print("La suma de los elementos", numeros, "con función es:", suma)
+
 # ---------------------------------------------------------------------------
 # Menú principal
 # ---------------------------------------------------------------------------
@@ -238,7 +263,10 @@ OPCIONES = {
 
 
 def main():
-    """Punto de entrada. Ejecuta el menú interactivo con variable bandera."""
+    sum_acumulator()
+    sum_funcion()
+
+    """Punto de entrada. Ejecuta el menú interactivo con variable bandera.
     continuar = True
     while continuar:
         mostrar_menu()
@@ -253,6 +281,7 @@ def main():
                 input("\n  Presiona Enter para volver al menu...")
         else:
             print(f"\n  Opcion '{opcion}' no reconocida.")
+    """
 
 
 if __name__ == "__main__":

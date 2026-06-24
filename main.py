@@ -119,6 +119,18 @@ def menu_ufuncs():
     """Sección 4: funciones universales."""
     print("\n--- Funciones universales ---")
 
+    arr = np.array([-3.0, -1.0, 0.0, 2.0, 5.0])
+    print(np.abs(arr))       # [3. 1. 0. 2. 5.]
+
+    arr_pos = np.array([0.0, 1.0, 4.0, 9.0, 16.0])
+    print(np.sqrt(arr_pos))  # [0. 1. 2. 3. 4.]
+
+    a = np.array([1_000_000, 2_000_000, 3_000_000], dtype=np.float64)
+    b = np.array([900_000, 2_100_000, 2_800_000], dtype=np.float64)
+
+    print(np.abs(a - b))     # [100000. 100000. 200000.]
+    print(np.maximum(a, b))  # [1000000. 2100000. 3000000.]
+
     # TODO: descomenta cuando hayas implementado calcular_variacion_absoluta
     # valores_anterior = np.array([
     #     1_200_000, 900_000, 0, 2_100_000,
